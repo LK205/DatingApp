@@ -1,0 +1,12 @@
+.form-control, .btn-success, .btn-default{
+    margin-top: 4px;
+    margin-right: 4px;
+}
+
+.btn-default{
+    background-color: rgb(227, 221, 214);
+    font-weight: 600;
+}
+.btn-default:hover{
+    opacity: .85;
+}
