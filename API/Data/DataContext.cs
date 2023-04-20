@@ -9,10 +9,9 @@ namespace API.Data
 {
     public class DataContext : DbContext
     {
-        public DataContext(DbContextOptions options) : base(options)
-        {
-        }
-
+        //Khoi tao database
+        public DataContext(DbContextOptions options) : base(options) {}
+        //Tao bang 
         public DbSet<AppUser> Users { get; set; }
     }
 }

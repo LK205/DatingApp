@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 
 namespace API.Entities
 {
+
+    //Khoi tao bang co so du lieu gom 4 cot Id, UserName, PasswordHash, PasswordSalt
     public class AppUser
     {
         public int Id { get; set; }
