@@ -5,7 +5,6 @@
 
 .btn-default{
     background-color: rgb(227, 221, 214);
-    font-weight: 600;
 }
 .btn-default:hover{
     opacity: .85;
