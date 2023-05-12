@@ -9,3 +9,8 @@
     background-color: black;
     border: none;
 }
+img {
+    max-height: 50px;
+    display: inline;
+    border-radius: 50%;
+}
