@@ -21,7 +21,7 @@
         
       <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
         <img src="{{user.photoUrl || './assets/user.png'}}" alt="{{user.username}}">
-        <a class="dropdown-toggle  text-light ms-2" style="text-decoration: none;" dropdownToggle>Wellcome {{user.username | titlecase}}</a>
+        <a class="dropdown-toggle  text-light ms-2" style="text-decoration: none;" dropdownToggle>Wellcome {{user.knownAs | titlecase}}</a>
         <div class="dropdown-menu" *dropdownMenu>
           <a class="dropdown-item" routerLink='member/edit' routerLinkActive='active'>Edit Profile</a>
           <div class="dropdown-divider"> </div>
@@ -45,7 +45,7 @@
                 class="form-control me-2" 
                 type="password" 
                 placeholder="Password....">
-          <button class="btn btn-success btn-login" type="submit">Login</button>
+          <button class="btn btn-success btn-login dangnhap" type="submit" >Login</button>
       </form>
     </div>
   </nav>

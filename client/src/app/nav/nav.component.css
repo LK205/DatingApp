@@ -14,3 +14,6 @@ img {
     display: inline;
     border-radius: 50%;
 }
+.dangnhap:hover{
+    background-color: #333;
+}

@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.initializeForm();
-    this.maxDate.setFullYear(this.maxDate.getFullYear() -18);
+    this.maxDate.setFullYear(this.maxDate.getFullYear() -16);
   }
 
   initializeForm() {
