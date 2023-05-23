@@ -19,7 +19,7 @@
         ]
     },
     {
-        "UserName": "Nguyen Thuy",
+        "UserName": "NguyenThuy",
         "Gender": "female",
         "DateOfBirth": "2003-11-09",
         "KnownAs": "Nguyen Thuy",
@@ -38,7 +38,7 @@
         ]
     },
     {
-        "UserName": "Nguyen Ha",
+        "UserName": "NguyenHa",
         "Gender": "female",
         "DateOfBirth": "2003-05-20",
         "KnownAs": "Nguyen Ha",
@@ -57,7 +57,7 @@
         ]
     },
     {
-        "UserName": "Huong Pham",
+        "UserName": "HuongPham",
         "Gender": "female",
         "DateOfBirth": "2003-05-29",
         "KnownAs": "Huong Pham",
@@ -95,7 +95,7 @@
         ]
     },
     {
-        "UserName": "Mai Thanh",
+        "UserName": "MaiThanh",
         "Gender": "male",
         "DateOfBirth": "2003-01-09",
         "KnownAs": "MTT",
@@ -114,7 +114,7 @@
         ]
     },
     {
-        "UserName": "Trung Tien",
+        "UserName": "TrungTien",
         "Gender": "male",
         "DateOfBirth": "2003-03-20",
         "KnownAs": "Trung Tien",
@@ -133,7 +133,7 @@
         ]
     },
     {
-        "UserName": "Le Khoi",
+        "UserName": "LeKhoi",
         "Gender": "male",
         "DateOfBirth": "2003-05-20",
         "KnownAs": "Le Khoi",
@@ -152,7 +152,7 @@
         ]
     },
     {
-        "UserName": "Duc Thanh",
+        "UserName": "DucThanh",
         "Gender": "male",
         "DateOfBirth": "2003-10-23",
         "KnownAs": "Duc Thanh",
@@ -171,7 +171,7 @@
         ]
     },
     {
-        "UserName": "Nguyen Duc",
+        "UserName": "NguyenDuc",
         "Gender": "male",
         "DateOfBirth": "2003-02-23",
         "KnownAs": "Nguyen Duc",
