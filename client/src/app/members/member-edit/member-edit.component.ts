@@ -5,6 +5,7 @@ import { take } from 'rxjs';
 import { Member } from 'src/app/_models/member';
 import { User } from 'src/app/_models/user';
 import { AccountService } from 'src/app/_services/accout.service';
+
 import { MembersService } from 'src/app/_services/members.service';
 
 @Component({
@@ -13,33 +14,39 @@ import { MembersService } from 'src/app/_services/members.service';
   styleUrls: ['./member-edit.component.css']
 })
 export class MemberEditComponent implements OnInit {
-  @ViewChild('editForm')  editForm!: NgForm;
-  member!: Member; 
-  user!: User;
-  @HostListener('window:beforeunload', ['$event']) unloadNotification($event: any){
-    if(this.editForm.dirty){
+  @ViewChild('editForm') editForm: NgForm | undefined;
+  @HostListener('window:beforeunload', ['$event']) unloadNotification($event:any) {
+    if (this.editForm?.dirty) {
       $event.returnValue = true;
     }
   }
+  member: Member | undefined;
+  user: User | null = null;
 
-  constructor (private accountService: AccountService, private membersService: MembersService, private toastr: ToastrService) {
-    this.accountService.currentUser$.pipe(take(1)).subscribe(user => this.user = user);
+  constructor(private accountService: AccountService, private memberService: MembersService, 
+      private toastr: ToastrService) { 
+    this.accountService.currentUser$.pipe(take(1)).subscribe({
+      next: user => this.user = user
+    })
   }
-  
+
   ngOnInit(): void {
     this.loadMember();
   }
 
-  loadMember(){
-    this.membersService.getMember(this.user.username).subscribe(member => {
-      this.member = member;
-    });
+  loadMember() {
+    if (!this.user) return;
+    this.memberService.getMember(this.user.username).subscribe({
+      next: member => this.member = member
+    })
   }
 
-  updateMember(){
-    this.membersService.updateMember(this.member).subscribe(()=>{
-      this.toastr.success("Cập nhật thông tin thành công");
-      this.editForm.reset(this.member);
+  updateMember() {
+    this.memberService.updateMember(this.editForm?.value).subscribe({
+      next: _ => {
+        this.toastr.success('Profile updated successfully');
+        this.editForm?.reset(this.member);
+      }
     })
   }
 }

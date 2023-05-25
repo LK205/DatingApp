@@ -14,15 +14,19 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./photo-editor.component.css']
 })
 export class PhotoEditorComponent implements OnInit {
-  @Input() member!: Member;
-  uploader!: FileUploader;
+  @Input() member: Member;
+  uploader: FileUploader;
   hasBaseDropzoneOver = false;
   basrUrl = environment.apiUrl;
-  user!: User;
+  user: User;
 
-  constructor (private accountService: AccountService, private memberService: MembersService ) {
-    this.accountService.currentUser$.pipe(take(1)).subscribe(user => this.user = user);
-  }
+  constructor(private accountService: AccountService, private memberService: MembersService) {
+    this.accountService.currentUser$.pipe(take(1)).subscribe({
+      next: user => {
+        if (user) this.user = user
+      }
+    })
+   }
   
   ngOnInit(): void {
     this.initializeUploader();
